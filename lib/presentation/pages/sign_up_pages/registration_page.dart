@@ -1,4 +1,4 @@
-import 'package:clinic_app/presentation/pages/login_page.dart';
+import 'package:clinic_app/presentation/pages/sign_up_pages/login_page.dart';
 import 'package:clinic_app/presentation/widget/direction_text.dart';
 import 'package:clinic_app/presentation/widget/text_field.dart';
 import 'package:flutter/material.dart';

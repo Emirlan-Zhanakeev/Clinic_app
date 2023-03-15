@@ -1,4 +1,4 @@
-import 'package:clinic_app/presentation/pages/registration_page.dart';
+import 'package:clinic_app/presentation/pages/sign_up_pages/registration_page.dart';
 import 'package:clinic_app/presentation/widget/direction_text.dart';
 import 'package:clinic_app/presentation/widget/text_field.dart';
 import 'package:flutter/material.dart';
@@ -35,22 +35,22 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 width: 300,
                 child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.transparent,
-                    foregroundColor: Colors.black,
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    side: const BorderSide(
-                      width: 1,
-                      color: Colors.black,
-                    ),
-                  ),
-                  child: const Text('Log In'),
-                ),
-              ),
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.transparent,
+            foregroundColor: Colors.black,
+            elevation: 0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            side: const BorderSide(
+              width: 1,
+              color: Colors.black,
+            ),
+          ),
+          child: const Text('Log In'),
+        ),
+        ),
               DirectionText(
                 title: 'Don\'t have an account? Join Us',
                 onTap: () {
