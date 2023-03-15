@@ -1,16 +1,11 @@
-import 'package:clinic_app/presentation/pages/login_page.dart';
+import 'package:clinic_app/presentation/pages/registration_page.dart';
 import 'package:clinic_app/presentation/widget/direction_text.dart';
 import 'package:clinic_app/presentation/widget/text_field.dart';
 import 'package:flutter/material.dart';
 
-class RegistrationPage extends StatefulWidget {
-  const RegistrationPage({Key? key}) : super(key: key);
+class LoginPage extends StatelessWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
-  @override
-  State<RegistrationPage> createState() => _RegistrationPageState();
-}
-
-class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +14,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
         child: Center(
           child: Column(
             children: [
-              const SizedBox(height: 5),
+              const SizedBox(height: 20),
               const Image(
                 image: AssetImage('assets/132234-medicine.gif'),
                 height: 200,
@@ -30,18 +25,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const Text(
-                'Registration',
+                'Login',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.normal),
               ),
               const SizedBox(height: 20),
               const TextFieldConstructor(title: 'Name'),
-              const TextFieldConstructor(title: 'Surname'),
-              const TextFieldConstructor(title: 'Email'),
-              const TextFieldConstructor(title: 'Birthday'),
-              const TextFieldConstructor(title: 'Gender'),
-              const TextFieldConstructor(title: 'Personal Number'),
               const TextFieldConstructor(title: 'Password'),
-              const TextFieldConstructor(title: 'Repeat Password'),
+              const SizedBox(height: 100),
               SizedBox(
                 width: 300,
                 child: ElevatedButton(
@@ -58,16 +48,16 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       color: Colors.black,
                     ),
                   ),
-                  child: const Text('Join Us'),
+                  child: const Text('Log In'),
                 ),
               ),
               DirectionText(
-                title: 'Have an account? Log in',
+                title: 'Don\'t have an account? Join Us',
                 onTap: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const LoginPage(),
+                      builder: (context) => const RegistrationPage(),
                     ),
                   );
                 },

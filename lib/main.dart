@@ -1,3 +1,4 @@
+import 'package:clinic_app/presentation/pages/login_page.dart';
 import 'package:clinic_app/presentation/pages/registration_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Clinic Application',
       theme: ThemeData(brightness: Brightness.light),
-      home: const RegistrationPage(),
+      home: const LoginPage(),
     );
   }
 }
