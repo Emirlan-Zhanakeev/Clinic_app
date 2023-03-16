@@ -1,3 +1,4 @@
+import 'package:clinic_app/presentation/pages/main_pages/history_page.dart';
 import 'package:clinic_app/presentation/pages/main_pages/profile_page.dart';
 import 'package:clinic_app/presentation/widget/blue_button.dart';
 import 'package:flutter/material.dart';
@@ -31,8 +32,7 @@ class MenuPage extends StatelessWidget {
               tileColor: const Color.fromRGBO(224, 246, 255, 1),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()));
-
+                    MaterialPageRoute(builder: (context) => const ProfilePage()));
               },
             ),
             const SizedBox(height: 10),
@@ -43,8 +43,8 @@ class MenuPage extends StatelessWidget {
                   const Icon(Icons.arrow_forward_sharp, color: Colors.blue),
               tileColor: const Color.fromRGBO(224, 246, 255, 1),
               onTap: () {
-                // Update the state of the app.
-                // ...
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HistoryPage()));
               },
             ),
           ],
