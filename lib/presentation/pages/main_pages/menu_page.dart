@@ -1,3 +1,4 @@
+import 'package:clinic_app/presentation/pages/main_pages/profile_page.dart';
 import 'package:clinic_app/presentation/widget/blue_button.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,6 @@ class MenuPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.white,
       drawer: Drawer(
@@ -15,8 +15,8 @@ class MenuPage extends StatelessWidget {
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                // color: Color.fromRGBO(224, 246, 255, 1),
-              ),
+                  // color: Color.fromRGBO(224, 246, 255, 1),
+                  ),
               child: Icon(
                 Icons.person,
                 color: Colors.blue,
@@ -30,17 +30,17 @@ class MenuPage extends StatelessWidget {
                   const Icon(Icons.arrow_forward_sharp, color: Colors.blue),
               tileColor: const Color.fromRGBO(224, 246, 255, 1),
               onTap: () {
-                // Update the state of the app.
-                // ...
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ProfilePage()));
+
               },
             ),
             const SizedBox(height: 10),
             ListTile(
-
               title:
-              const Text('History', style: TextStyle(color: Colors.blue)),
+                  const Text('History', style: TextStyle(color: Colors.blue)),
               trailing:
-              const Icon(Icons.arrow_forward_sharp, color: Colors.blue),
+                  const Icon(Icons.arrow_forward_sharp, color: Colors.blue),
               tileColor: const Color.fromRGBO(224, 246, 255, 1),
               onTap: () {
                 // Update the state of the app.
@@ -57,7 +57,11 @@ class MenuPage extends StatelessWidget {
         centerTitle: true,
         elevation: 0,
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.settings))
+          IconButton(
+              onPressed: () {
+
+              },
+              icon: const Icon(Icons.settings))
         ],
       ),
       body: Center(
