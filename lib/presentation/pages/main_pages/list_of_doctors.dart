@@ -1,8 +1,8 @@
-import 'package:clinic_app/presentation/widget/records_card.dart';
+import 'package:clinic_app/presentation/widget/doctors_card.dart';
 import 'package:flutter/material.dart';
 
-class HistoryPage extends StatelessWidget {
-  const HistoryPage({Key? key}) : super(key: key);
+class DoctorsList extends StatelessWidget {
+  const DoctorsList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class HistoryPage extends StatelessWidget {
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.blue),
         backgroundColor: const Color.fromRGBO(224, 246, 255, 1),
-        title: const Text('History', style: TextStyle(color: Colors.blue)),
+        title: const Text('Doctors list', style: TextStyle(color: Colors.blue)),
         centerTitle: true,
         elevation: 0,
         actions: [
@@ -24,9 +24,13 @@ class HistoryPage extends StatelessWidget {
             // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 15),
-              RecordsCard(title: 'Doctor Speciality', date: '24/01/2023', onPressed: (){}),
-              RecordsCard(title: 'Doctor Speciality', date: '24/01/2023', onPressed: (){}),
-              RecordsCard(title: 'Doctor Speciality', date: '24/01/2023', onPressed: (){}),
+              DoctorsCard(title: 'Traumatologist', onTap: (){}),
+              DoctorsCard(title: 'Therapist', onTap: (){}),
+              DoctorsCard(title: 'Surgeon', onTap: (){}),
+              DoctorsCard(title: 'Oculist', onTap: (){}),
+              DoctorsCard(title: 'Urologist', onTap: (){}),
+              DoctorsCard(title: 'Gynecologist', onTap: (){}),
+              DoctorsCard(title: 'Nurse', onTap: (){}),
             ],
           ),
         ),

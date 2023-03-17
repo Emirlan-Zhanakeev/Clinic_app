@@ -1,4 +1,5 @@
 import 'package:clinic_app/presentation/pages/main_pages/history_page.dart';
+import 'package:clinic_app/presentation/pages/main_pages/list_of_doctors.dart';
 import 'package:clinic_app/presentation/pages/main_pages/profile_page.dart';
 import 'package:clinic_app/presentation/widget/blue_button.dart';
 import 'package:flutter/material.dart';
@@ -115,7 +116,9 @@ class MenuPage extends StatelessWidget {
               width: 300,
               height: 40,
               title: 'Doctors List',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const DoctorsList()));
+              },
             ),
           ],
         ),
